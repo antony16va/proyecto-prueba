@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="style.css" rel="stylesheet">
+    <title>Matricula-Virtual</title>
   </head>
   <body>
     <h1>SISTEMA DE MATRICULA UNFV</h1>
@@ -11,22 +12,59 @@
       <h3>Imagenes del Sistema</h3>
       <p>Esta <a href="https://www.unfv.edu.pe/" target="_blank" rel="noopener noreferrer">plataforma</a> es solo un modelo</p>
       <!-- Este solo es un comentario -->
-      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="slider_unfv_anime.png" alt="Fondo de la Universidad"></a>  
-
+      <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
+        <img id="unfv" src="slider_unfv_anime.png" alt="Fondo de la Universidad"></a>  
+      <hr>
       <h3>Listas de cursos</h3>
-      <p>Cursos disponibles</p>
-      <ul>
-        <li>Fundamentos de Calculo</li>
-        <li>Ingles</li>
-        <li>Fisica</li>
-      </ul>
-      <p>Cursos no disponibles</p>
-      <ol>
-        <li>Quimica</li>
-        <li>Frances</li>
-        <li>Programacion</li>
-      </ol>
+
+      <div>
+        <p>Cursos <em>disponibles</em></p>
+        <ul class="lista-cursos">
+          <li>Fundamentos de Calculo</li>
+          <li>Ingles</li>
+          <li>Fisica</li>
+        </ul>
+        <p>Cursos <strong>"no disponibles"</strong></p>
+        <ol class="lista-cursos">
+          <li>Quimica</li>
+          <li><s>Frances</s></li>
+          <li>Programacion</li>
+        </ol>
+      </div>
+
+      <form action="/enviar-respuesta">
+        <!-- Botones de radio -->
+        <label for="publico">
+          <input id="publico" type="radio" name="regular-asociado" checked value="pub">Publico
+        </label><br>
+
+        <label for="asociado">
+          <input id="asociado" type="radio" name="regular-asociado" value="asoc">Asociado
+        </label><br>
+
+        <!-- Casillas de verificacion -->
+        <hr>
+        <label for="tercio">
+          <input id="tercio" type="checkbox" name="nivel" value="tercios">Tercio Superior
+        </label>
+        <label for="medio">
+          <input id="medio" type="checkbox" name="nivel" value="medios">Medio Superior
+        </label>
+        <label for="regular">
+          <input id="regular" type="checkbox" name="nivel" checked value="reg">Regular
+        </label><br>
+        <hr>
+        <!-- Texto y Botón Enviar -->
+        <input type="text" placeholder="Ingresa el curso de tu interes" required>
+        <br>
+        <button type="submit">Enviar</button>
+
+      </form>
+      <img id="anexo7" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/FacultadminiUNFV.jpg/640px-FacultadminiUNFV.jpg" alt="Fondo del anexo 7">
     </main>
+    <footer>
+      <p><small>Sin derechos de autor - <a href="https://unfv.edu.pe" target="_blank">estudiantes.edu.pe</a></small></p>
+    </footer>
   </body>
 
 </html>
